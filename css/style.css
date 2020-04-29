@@ -120,6 +120,20 @@ img{width: 100%;}
 .container-slider{
 	grid-column:inicio-temp  / fim-temp ;
 	grid-row: inicio-slider/fim-slider;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container-slider h2{
+	color: #fff;
+}
+
+.container-slider h2::after{
+	content: "|";
+	margin-left: 5px;
+	opacity: 1;
+	animation: pisca .7s infinite;
+	color: #0af;
 }
 .container-servicos{
 	grid-column: inicio-temp / fim-temp ;

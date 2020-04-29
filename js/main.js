@@ -54,6 +54,8 @@ window.onload= function(){
 
 	const subtitulo = document.getElementById('subtitulo');
 	escreveFrase(subtitulo);
+	var aviso=document.getElementById('aviso');
+	escreveFrase(aviso);
 
 
 }
