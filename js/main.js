@@ -4,7 +4,7 @@ window.onload= function(){
 	var btnMenu = document.getElementById('btn_menu');
 	var textLogo = document.getElementById('logo-span');
 	var titlesCabecalho = document.getElementsByClassName('section-titles')[0];
-	titlesCabecalho.style.marginTop = cabecalho.offsetHeight+100+'px';
+	titlesCabecalho.style.marginTop = cabecalho.offsetHeight+60+'px';
 
 	window.addEventListener('scroll',function(){
 
@@ -20,7 +20,7 @@ window.onload= function(){
 
 		if(window.scrollY > cabecalho.offsetHeight){
 			
-			cabecalho.style.backgroundColor = 'rgba(255,255,255,.9)';
+			cabecalho.style.backgroundColor = 'rgba(255,255,255,1)';
 			mudaCor([btnMenu,textLogo],'#333');
 
 		}else{
@@ -30,9 +30,9 @@ window.onload= function(){
 	})
 
 	//TITLES DO cabeçalho
-	var p = document.querySelector('#subtitulo');
-	p.style.opacity='1';
-	p.style.transform = 'translate3d(0,0,0)';
+	var divp = document.querySelector('#div-subtitulo');
+	divp.style.opacity='1';
+	divp.style.transform = 'translate3d(0,0,0)';
 
 	//efeito maquina de escrever
 
