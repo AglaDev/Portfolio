@@ -57,5 +57,14 @@ window.onload= function(){
 	var aviso=document.getElementById('aviso');
 	escreveFrase(aviso);
 
+	//MENU
+
+	var btnMenu = document.getElementById('btn_menu');
+
+	btnMenu.addEventListener('click',function(event){
+
+		event.preventDefault();
+	})
+
 
 }
