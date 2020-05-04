@@ -47,7 +47,7 @@ window.onload= function(){
 
 				elemento.innerHTML += letra;
 
-			},75 * i);
+			},80 * i);
 
 		});
 	}
