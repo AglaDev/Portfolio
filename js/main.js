@@ -64,11 +64,6 @@ window.onload= function(){
 	btnMenu.addEventListener('click',function(event){
 
 		event.preventDefault();
-
-		menu.style.display = "block";
-		document.querySelector('html').style.overflow = "hidden";
-
-
 	})
 
 
