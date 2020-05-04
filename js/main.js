@@ -60,10 +60,15 @@ window.onload= function(){
 	//MENU
 
 	var btnMenu = document.getElementById('btn_menu');
-
+	var menu = document.getElementById('content-menu');
 	btnMenu.addEventListener('click',function(event){
 
 		event.preventDefault();
+
+		menu.style.display = "block";
+		document.querySelector('html').style.overflow = "hidden";
+
+
 	})
 
 

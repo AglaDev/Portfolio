@@ -66,13 +66,13 @@ img{width: 100%;}
 }
 /*menu*/
 .content-menu{
-	width: 100%;
+	width: 270px;
 	height: 100vh;
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	top:0;
 	left: 0;
-	transform: translate3d(-90px,0,0);
+	transform: translate3d(0px,0,0);
 	transition: 0.3s;
 	display: none;
 	z-index: 3;
