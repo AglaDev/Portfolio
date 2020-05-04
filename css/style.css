@@ -86,14 +86,14 @@ img{width: 100%;}
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	margin-bottom: 100px;
+
 }
 
 .section-titles h2{
 	font-size: 1.5em;
 	color: #ffffff;
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 #div-subtitulo{
 	width: 100%;
@@ -103,7 +103,7 @@ img{width: 100%;}
 	background-color: rgba(255,255, 255,0.2);
 	opacity: 0;
 	transition: .6s;
-	transform: translate3d(-50px,0,0);
+	transform: translate3d(50px,0,0);
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -112,6 +112,7 @@ img{width: 100%;}
 	color: #fff;
 	transition: .6s;
 	text-align: center;
+
 }
 .section-titles p::after{
 	content: "|";
@@ -123,26 +124,6 @@ img{width: 100%;}
 @keyframes pisca{
 	0%,100%{opacity: 1}
 	50%{opacity: 0}
-}
-/*button orçamento*/
-.section-btn-orcamento{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex;
-	padding: 10px;
-}
-
-.section-btn-orcamento button{
-	background-color: #0af;
-	border-radius: 7px;
-	color: #ffffff;
-	padding: 10px 20px;
-	font-weight: 300;
-	opacity: 0.8;
-}
-.section-btn-orcamento button:hover{
-	opacity: 1;
 }
 
 /*SLIDER*/
