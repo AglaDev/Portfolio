@@ -36,6 +36,10 @@ img{width: 100%;}
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 #content-logo-btn-menu{
 	width: 100%;
@@ -125,6 +129,47 @@ img{width: 100%;}
 	0%,100%{opacity: 1}
 	50%{opacity: 0}
 }
+/*buttons orçamento e mouse animado*/
+.section-buttons{
+	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 10px;
+}
+
+.section-buttons #btn-orçamento{
+	background-color: #0af;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 8px;
+	margin-bottom: 40px;
+}
+
+.section-buttons #btn-mouse{
+	width: 20px;
+	height: 30px;
+	border:1px solid #0af;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+	align-items:flex-start;
+	padding: 1px;
+}
+
+.section-buttons #btn-mouse span{
+	width: 3px;
+	height:4px;
+	background-color: #0af;
+	animation: mouse .8s infinite;
+	transition: .3s;
+}
+@keyframes mouse{
+	0%{transform: translate3d(0,0,0)}
+	100%{transform: translate3d(0,10px,0);}
+}
+
 
 /*SLIDER*/
 .container-slider{
