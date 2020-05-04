@@ -83,7 +83,8 @@ img{width: 100%;}
 }
 
 
-/*TITULOS CABEÇALHOS*/	
+/*TITULOS CABEÇALHOS*/
+	
 .section-titles{
 	display: flex;
 	flex-direction: column;
