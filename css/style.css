@@ -36,6 +36,9 @@ img{width: 100%;}
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 #content-logo-btn-menu{
 	width: 100%;
@@ -107,7 +110,6 @@ img{width: 100%;}
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	margin-bottom: 50px;
 }
 .section-titles p{
 	color: #fff;
@@ -137,7 +139,13 @@ img{width: 100%;}
 	background-color: #0af;
 	border-radius: 7px;
 	color: #ffffff;
-	padding: 10px 15px;
+	padding: 10px 20px;
+	font-weight: 300;
+	opacity: 0.8;
+	transition: .2s;
+}
+.section-btn-orcamento button:hover{
+	opacity: 1;
 }
 
 /*SLIDER*/
