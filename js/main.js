@@ -60,7 +60,8 @@ window.onload= function(){
 	//MENU
 
 	var btnMenu = document.getElementById('btn_menu');
-	var menu = document.getElementById('content-menu');
+	var contentMenu = document.getElementById('content-menu');
+	//contentMenu.style.top=cabecalho.offsetHeight+'px';
 	btnMenu.addEventListener('click',function(event){
 
 		event.preventDefault();
