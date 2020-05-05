@@ -40,7 +40,6 @@ img{width: 100%;}
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background-attachment: fixed;
 }
 #content-logo-btn-menu{
 	width: 100%;
