@@ -1,38 +1,72 @@
 window.onload= function(){
-	//mudar cores cabeçalho
-	var cabecalho = document.getElementById('content-logo-btn-menu');
-	var btnMenu = document.getElementById('btn_menu');
-	var textLogo = document.getElementById('logo-span');
-	var titlesCabecalho = document.getElementsByClassName('section-titles')[0];
-	titlesCabecalho.style.marginTop = cabecalho.offsetHeight+60+'px';
-
-	window.addEventListener('scroll',function(){
 
 
-		function mudaCor(args,cor){
+//AFASTAR O TITULO DO CABEÇALHO
+var cabecalho = document.getElementById('content-logo-btn-menu');
+var title = document.querySelector('.section-titles');
+var btnMenu = document.getElementById('btn_menu');
 
-			for(let i = 0; i < args.length; i++){
+title.style.marginTop= cabecalho.offsetHeight+60+'px';
 
-				args[i].style.color = cor;
-			}
+//FUNÇÃO MUDA COR 
+function mudaCorBackground(arg,cor){
+		
+	arg.forEach(function(e){
 
-		}
+		e.style.backgroundColor = cor;
 
-		if(window.scrollY > cabecalho.offsetHeight){
-			
-			cabecalho.style.backgroundColor = 'rgba(255,255,255,1)';
-			mudaCor([btnMenu,textLogo],'#333');
+	});
 
-		}else{
-			cabecalho.style.backgroundColor = 'initial';
-			mudaCor([btnMenu,textLogo],'#fff');
-		}
-	})
+}
 
-	//TITLES DO cabeçalho
-	var divp = document.querySelector('#div-subtitulo');
-	divp.style.opacity='1';
-	divp.style.transform = 'translate3d(0,0,0)';
+function mudaColor(arg,cor){
+		
+	arg.forEach(function(e){
+
+		e.style.color = cor;
+
+	});
+
+}
+
+
+//ANIMAÇÃO BTN MENU	
+var linhasBtnMenu = document.querySelectorAll('.linha');
+btnMenu.addEventListener('click',function(){
+
+
+
+
+
+});
+
+//aqui muda a cor do cabeçalho e btn menu
+var pos;
+window.addEventListener('scroll',function(){
+
+	pos = window.scrollY;
+	posCab = cabecalho.offsetHeight;
+	var textLog = document.getElementById('logo-span');
+
+	if (pos > posCab) {
+
+		mudaCorBackground([cabecalho], '#fff');
+		mudaCorBackground(linhasBtnMenu, '#333');
+		mudaColor([textLog],"#333");
+
+	}else{
+
+		mudaCorBackground([cabecalho], 'initial');
+		mudaCorBackground(linhasBtnMenu, '#fff');
+		mudaColor([textLog],"#fff");
+	}
+
+
+
+})
+
+	
+
 
 	//efeito maquina de escrever
 
@@ -53,19 +87,17 @@ window.onload= function(){
 	}
 
 	const subtitulo = document.getElementById('subtitulo');
+	var divSubtitulo = document.getElementById('div-subtitulo');
+	divSubtitulo.style.opacity= 1;
+	divSubtitulo.style.transform = 'translate3d(0,0,0)';
 	escreveFrase(subtitulo);
+
 	var aviso=document.getElementById('aviso');
 	escreveFrase(aviso);
 
-	//MENU
 
-	var btnMenu = document.getElementById('btn_menu');
-	var contentMenu = document.getElementById('content-menu');
-	//contentMenu.style.top=cabecalho.offsetHeight+'px';
-	btnMenu.addEventListener('click',function(event){
 
-		event.preventDefault();
-	})
+
 
 
 }
