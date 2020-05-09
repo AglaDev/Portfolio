@@ -20,7 +20,7 @@ img{width: 100%;}
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
 	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
 			  [inicio-servicos] 30vh[fim-servicos]10px
-			  [inicio-slider] 20vh [fim-slider]10px
+			  [inicio-slider] 30vh [fim-slider]10px
 			  [inicio-projetos]30vh[fim-projetos]10px
 			  [inicio-footer] 70vh [fim-footer];
 }
