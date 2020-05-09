@@ -102,12 +102,14 @@ img{width: 100%;}
 	position: fixed;
 	top:0;
 	left: 0;
+
 	transform: translate3d(-270px,0,0);
 	display:block;
 	z-index: 3;
 	opacity: 0;
 	transition: .4s;
 	
+
 }
 .content-menu-toggle{
 	transition: 0.4s;
