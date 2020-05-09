@@ -49,12 +49,14 @@ window.addEventListener('scroll',function(){
 	if (pos > posCab) {
 
 		mudaCorBackground([cabecalho], '#fff');
+		cabecalho.style.borderBottom = "rgba(0,170,255,0.2) 1px solid";
 		mudaCorBackground(linhasBtnMenu, '#333');
 		mudaColor([textLog],"#333");
 
 	}else{
 
 		mudaCorBackground([cabecalho], 'initial');
+		cabecalho.style.borderBottom = "rgba(255,255,255,.2) 1px solid";
 		mudaCorBackground(linhasBtnMenu, '#fff');
 		mudaColor([textLog],"#fff");
 	}
