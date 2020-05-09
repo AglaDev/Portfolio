@@ -90,8 +90,7 @@ window.addEventListener('scroll',function(){
 	divSubtitulo.style.transform = 'translate3d(0,0,0)';
 	escreveFrase(subtitulo);
 
-	var aviso=document.getElementById('aviso');
-	escreveFrase(aviso);
+	
 
 
 
