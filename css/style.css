@@ -18,7 +18,7 @@ img{width: 100%;}
 	width: 100%;
 	display: grid;
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
-	grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]10px
+	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
 			  [inicio-slider] 20vh [fim-slider]10px
 			  [inicio-servicos] 30vh[fim-servicos]10px
 			  [inicio-projetos]30vh[fim-projetos]10px
@@ -103,16 +103,40 @@ img{width: 100%;}
 	top:0;
 	left: 0;
 	transform: translate3d(0px,0,0);
-	transition: 0.3s;
-	display:none;
+	display:block;
 	z-index: 3;
-
+	opacity: 1;
+	transition: .4s;
+}
+.content-menu-toggle{
+	transition: 0.4s;
+	transform: translate3d(0,0,0);
+	opacity: 1;
 }
 .content-menu ul#menu{
 	width: 100%;
 	height: 100%;
 	background-color: #efefef;
 }
+
+.content-menu ul#menu .section-midias ul{
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+}
+.content-menu ul#menu .section-midias ul li{
+	padding: 10px;
+	font-size: 1.3em;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+.content-menu ul#menu .section-midias ul li:hover{background-color: #f1f1f1;}
+
+.fa-instagram{color:#e74c6c}
+.fa-facebook-f{color:#4267b2}
+.fa-github{color:#252a2e}	
+.fa-envelope{color:#c13b2c }
 
 /*TITULOS CABEÇALHOS*/
 	
