@@ -107,6 +107,7 @@ img{width: 100%;}
 	z-index: 3;
 	opacity: 0;
 	transition: .4s;
+	
 }
 .content-menu-toggle{
 	transition: 0.4s;
