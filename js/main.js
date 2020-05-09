@@ -9,24 +9,15 @@ var btnMenu = document.getElementById('btn_menu');
 title.style.marginTop= cabecalho.offsetHeight+60+'px';
 
 //FUNÇÃO MUDA COR 
-function mudaCorBackground(arg,cor){
-		
+function mudaCorBackground(arg,cor){	
 	arg.forEach(function(e){
-
 		e.style.backgroundColor = cor;
-
 	});
-
 }
-
-function mudaColor(arg,cor){
-		
+function mudaColor(arg,cor){	
 	arg.forEach(function(e){
-
 		e.style.color = cor;
-
 	});
-
 }
 
 
@@ -34,9 +25,11 @@ function mudaColor(arg,cor){
 var linhasBtnMenu = document.querySelectorAll('.linha');
 btnMenu.addEventListener('click',function(){
 
+	linhasBtnMenu.forEach(function(e,i){
 
+		e.classList.toggle('togglel'+i);
 
-
+	})
 
 });
 
