@@ -278,26 +278,46 @@ img{width: 100%;}
 	margin-top: 30px;
 }
 
-.servico{ /*ora que aparecer no scroll almentar a scale da img com js*/
+.servico{ /*ora que aparecer no scroll almentar a scale da img com js e o ttitle surge do left*/
 	background-color: #fff;
 	display:flex;
 	flex-direction: column;
 	padding: 20px;
 	border-radius: 10px;
 	margin-bottom: 30px;
+	font-family: 'Open Sans' sans-serif;
+	cursor: pointer;
 }
 .servico .div-img{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 .servico .div-img img{
 	width: 200px;
 	stroke:#333;
 	stroke-width: 1px;
+	transition: .3s;
+	opacity: 0.7;
+}
+.servico:hover .div-img img{
+	transform: scale(1.09);
+	opacity: 1;
 }
 
+.servico .div-titles{
+	text-align: center;
+	padding: 30px;
+}
+.servico .div-titles h2{
+	color: #333;
+	font-size: 1em;
+	margin-bottom: 20px;;
+}
+.servico .div-titles p{
+	color:#6f7c81 ;
+}
 
 
 .container-slider{
