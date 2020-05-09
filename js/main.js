@@ -33,11 +33,8 @@ btnMenu.addEventListener('click',function(){
 
 	})
 
-<<<<<<< HEAD
+
 	contentMenu.classList.toggle('content-menu-toggle');
-=======
-	//contentMenu.classList.toggle('content-menu-toggle');
->>>>>>> baf9a2ef6eb32d7eafe564c2db14a73ae85637cd
 
 });
 
