@@ -121,9 +121,9 @@ img{width: 100%;}
 .content-menu ul#menu{
 	width: 100%;
 	height: 100%;
-	background-color: #efefef;
+	background-color: #fff;
 }
-
+.content-menu ul#menu .section-midias{margin-bottom: 30px;}
 .content-menu ul#menu .section-midias ul{
 	display: flex;
 	justify-content: space-between;
@@ -143,8 +143,28 @@ img{width: 100%;}
 .fa-github{color:#252a2e}	
 .fa-envelope{color:#c13b2c }
 
+/*CONFIGURAÇÕES DO MENU*/
+.content-menu ul#menu{
+	display: flex;
+	flex-direction: column;
+}
+.content-menu ul#menu li.item-menu{
+	font-size: 1em;
+	display: flex;
+}
+.content-menu ul#menu li.item-menu a{
+	color: #333;
+	flex: 1;
+	padding: 10px;
+}
+.content-menu ul#menu li.item-menu a:hover{
+	background-color: #333;
+	color: #fff;
+}
+
+
+
 /*TITULOS CABEÇALHOS*/
-	
 .section-titles{
 	display: flex;
 	flex-direction: column;
