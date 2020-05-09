@@ -19,10 +19,11 @@ img{width: 100%;}
 	display: grid;
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
 	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
-			  [inicio-servicos] 30vh[fim-servicos]10px
+			  [inicio-servicos] auto[fim-servicos]10px
 			  [inicio-slider] 30vh [fim-slider]10px
 			  [inicio-projetos]30vh[fim-projetos]10px
 			  [inicio-footer] 70vh [fim-footer];
+	background-color: #efefef;
 }
  .item{
  	background-color: #333;
@@ -43,11 +44,12 @@ img{width: 100%;}
 	width: 70px;
 	height: 3px;
 	background-color: #0af;
+	margin-bottom: 40px;
 }
 .container-cabecalho{
 	grid-column:inicio / fim ;
 	grid-row:inicio-cabecalho / fim-cabecalho ;
-	background: linear-gradient(rgba(46, 49, 49, 0.8),rgba(46, 49, 49, 0.8)), url(../img/cabecalho.jpg);
+	background: linear-gradient(rgba(46, 49, 49, 0.8),rgba(46, 49, 49, 0.8)), url(../img/jpg/cabecalho.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -273,8 +275,28 @@ img{width: 100%;}
 .container-servicos{
 	grid-column: inicio-temp / fim-temp ;
 	grid-row:inicio-servicos/fim-servicos ;
+	margin-top: 30px;
 }
 
+.servico{ /*ora que aparecer no scroll almentar a scale da img com js*/
+	background-color: #fff;
+	display:flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+.servico .div-img{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.servico .div-img img{
+	width: 200px;
+	stroke:#333;
+	stroke-width: 1px;
+}
 
 
 
