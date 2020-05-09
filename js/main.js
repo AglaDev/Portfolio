@@ -21,8 +21,10 @@ function mudaColor(arg,cor){
 }
 
 
-//ANIMAÇÃO BTN MENU	
+//ANIMAÇÃO BTN MENU	E CONTENT MENU
 var linhasBtnMenu = document.querySelectorAll('.linha');
+var contentMenu = document.getElementById('content-menu');
+
 btnMenu.addEventListener('click',function(){
 
 	linhasBtnMenu.forEach(function(e,i){
@@ -30,6 +32,8 @@ btnMenu.addEventListener('click',function(){
 		e.classList.toggle('togglel'+i);
 
 	})
+
+	contentMenu.classList.toggle('content-menu-toggle');
 
 });
 
