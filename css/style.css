@@ -295,7 +295,7 @@ img{width: 100%;}
 	max-height: 100px;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 .servico .div-img img{
 	width: 200px;
@@ -325,7 +325,7 @@ img{width: 100%;}
 .servico .div-titles h2{
 	color: #333;
 	font-size: 1em;
-	margin-bottom: 20px;;
+	margin-bottom: 15px;;
 }
 .servico .div-titles p{
 	color:#6f7c81 ;
