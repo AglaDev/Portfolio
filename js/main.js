@@ -92,7 +92,7 @@ window.addEventListener('scroll',function(){
 	//ANIMAÇÕES NA SECTION DE SERVIÇOS
 	//usar variavel pos
 	var servicos = document.querySelectorAll('.servico');
-	var offset = window.innerHeight * 2.6 /4;
+	var offset = window.innerHeight * 2.8 /4;
 	console.log(offset);
 	function animeScroll(){
 		
@@ -119,7 +119,7 @@ window.addEventListener('scroll',function(){
 	
 
 	animeScroll();
-	
+
 	window.addEventListener('scroll', function(){
 
 
