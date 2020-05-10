@@ -129,37 +129,46 @@ img{width: 100%;}
 	transform: translate3d(-100%,0,0);
 	display:block;
 	opacity: 0;
-	transition: .4s;
+	transition: .6s;
 	z-index: 1;
 
 }
 .content-menu-toggle{
-	transition: 0.4s;
+	transition: .6s;
 	transform: translate3d(0,0,0);
 	opacity: 1;
 }
-.content-menu ul#menu{
+.menu{
 	width: 270px;
 	height: 100%;
 	background-color: #fff;
+	transform: translateX(-70px);
+	opacity: 0;
+	transition: 1s;
 }
-.content-menu ul#menu .section-midias{
+.menu-toggle{
+	transform: translateX(0);
+	opacity: 1;
+	transition: 1s;
+}
+
+.menu .section-midias{
 	margin-bottom: 30px;
 	border-bottom: 1px solid #efefef;
 }
-.content-menu ul#menu .section-midias ul{
+.menu .section-midias ul{
 	display: flex;
 	justify-content: space-between;
 	background-color: #ffffff;
 }
-.content-menu ul#menu .section-midias ul li{
+.menu .section-midias ul li{
 	padding: 10px;
 	font-size: 1.6em;
 	flex: 1;
 	display: flex;
 	justify-content: center;
 }
-.content-menu ul#menu .section-midias ul li:hover{background-color: #f1f1f1;}
+.menu .section-midias ul li:hover{background-color: #f1f1f1;}
 
 .fa-instagram{color:#e74c6c}
 .fa-facebook-f{color:#4267b2}
@@ -167,20 +176,20 @@ img{width: 100%;}
 .fa-envelope{color:#c13b2c }
 
 /*CONFIGURAÇÕES DO MENU*/
-.content-menu ul#menu{
+.menu{
 	display: flex;
 	flex-direction: column;
 }
-.content-menu ul#menu li.item-menu{
+.menu li.item-menu{
 	font-size: 1em;
 	display: flex;
 }
-.content-menu ul#menu li.item-menu a{
+.menu li.item-menu a{
 	color: #333;
 	flex: 1;
 	padding: 15px;
 }
-.content-menu ul#menu li.item-menu a:hover{
+.menu li.item-menu a:hover{
 	background-color: #333;
 	color: #fff;
 }

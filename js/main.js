@@ -5,7 +5,7 @@ window.onload= function(){
 	var btnMenu = document.getElementById('btn_menu');
 	var linhasMenu = btnMenu.querySelectorAll('.linha');
 	var contentMenu = document.getElementById('content-menu');
-	var menu = contentMenu.querySelector('#menu');
+	var menu = contentMenu.querySelector('.menu');
 	var cabecalho = document.getElementById('content-logo-btn-menu');
 	var altturaCabecalho = cabecalho.offsetHeight;
 	var title = document.querySelector('.section-titles');
@@ -53,6 +53,7 @@ function openCloseMenu(){
 	var corCabecalhoAtual = cabecalho.style.backgroundColor;
 
 	contentMenu.classList.toggle('content-menu-toggle');
+	menu.classList.toggle('menu-toggle');
 	body.classList.toggle('paralisa-body');
 	var pos = window.scrollY;
 	 //existe um bug quando recarrega a pagina com scroll maior que o tamanho do cabecalho
