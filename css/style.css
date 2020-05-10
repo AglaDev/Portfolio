@@ -330,6 +330,40 @@ img{width: 100%;}
 	color:#6f7c81 ;
 }
 
+/*CONFIGURAÇÃO DETALHES DOS SERVIÇOS*/
+.detalhes-servicos{
+	width: 100%;
+	
+}
+
+.detalhe{
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	cursor: pointer;
+}
+.title-detalhe{
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content:flex-start;
+	padding: 10px 15px;
+	border-left: 2px solid #0af;
+	font-size: 0.9em;
+}
+.title-detalhe h2{
+	flex: 1;
+	text-align: center;
+	color: #6f7c81 ;
+}
+.title-detalhe h2:hover{
+	color: #333;
+}
+.title-detalhe span{
+	color:#6f7c81  ;
+}
+
+
 
 .container-slider{
 	grid-column:inicio-temp  / fim-temp ;
