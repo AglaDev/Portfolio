@@ -24,6 +24,8 @@ function mudaColor(arg,cor){
 //ANIMAÇÃO BTN MENU	E CONTENT MENU
 var linhasBtnMenu = document.querySelectorAll('.linha');
 var contentMenu = document.getElementById('content-menu');
+var menu = contentMenu.querySelector('#menu');
+menu.style.marginTop = cabecalho.offsetHeight+"px";
 
 btnMenu.addEventListener('click',function(){
 
@@ -35,6 +37,7 @@ btnMenu.addEventListener('click',function(){
 
 
 	contentMenu.classList.toggle('content-menu-toggle');
+	body
 
 });
 
@@ -93,7 +96,7 @@ window.addEventListener('scroll',function(){
 	//usar variavel pos
 	(function(){ //serve para encapsular todo esse escopo para não gerar conflitos futuros
 	var servicos = document.querySelectorAll('.servico');
-	var offset = window.innerHeight * 2.8 /4;
+	var offset = window.innerHeight * 2.9 /4;
 	console.log(offset);
 	function animeScroll(){
 		
