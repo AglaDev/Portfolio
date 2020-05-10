@@ -12,7 +12,9 @@
 a{text-decoration: none;}
 ul{list-style: none;}
 img{width: 100%;}
-
+.paralisa-body{
+	overflow: hidden;
+}
 /*CONFIGURAÇÕES DO GRID-CONTAINER*/	
 .grid-container{
 	width: 100%;

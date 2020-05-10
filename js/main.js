@@ -1,12 +1,20 @@
 window.onload= function(){
+	
+	
+	//AFASTAR O TITULO DO CABEÇALHO
+	var btnMenu = document.getElementById('btn_menu');
+	var linhasMenu = btnMenu.querySelectorAll('.linha');
+	var contentMenu = document.getElementById('content-menu');
+	var cabecalho = document.getElementById('content-logo-btn-menu');
+	var altturaCabecalho = cabecalho.offsetHeight;
+	var title = document.querySelector('.section-titles');
+	var posScrol;
+	var textLog = document.getElementById('logo-span');
+	
 
 
-//AFASTAR O TITULO DO CABEÇALHO
-var cabecalho = document.getElementById('content-logo-btn-menu');
-var title = document.querySelector('.section-titles');
-var btnMenu = document.getElementById('btn_menu');
 
-title.style.marginTop= cabecalho.offsetHeight+60+'px';
+title.style.marginTop= altturaCabecalho+60+'px';
 
 //FUNÇÃO MUDA COR 
 function mudaCorBackground(arg,cor){	
@@ -20,53 +28,82 @@ function mudaColor(arg,cor){
 	});
 }
 
+//aqui muda a cor do cabeçalho e btn menu
+
+window.addEventListener('scroll',function(){
+	posScrol = window.scrollY;
+
+	if (posScrol > altturaCabecalho) {
+		mudaCorBackground([cabecalho], '#fff');
+		cabecalho.style.borderBottom = "rgba(0,170,255,0.2) 1px solid";
+		CorBtnMenu("#333");
+		mudaColor([textLog],"#333");
+	}else{
+		mudaCorBackground([cabecalho], 'initial');
+		cabecalho.style.borderBottom = "rgba(255,255,255,.2) 1px solid";
+		CorBtnMenu('#fff');
+		mudaColor([textLog],"#fff");
+	}
+});
+
+
+function openCloseMenu(){
+	var body = document.querySelector('body');
+	var corCabecalhoAtual = cabecalho.style.backgroundColor;
+
+	contentMenu.classList.toggle('content-menu-toggle');
+	body.classList.toggle('paralisa-body');
+	var pos = window.scrollY;
+	 //existe um bug quando recarrega a pagina com scroll maior que o tamanho do cabecalho
+	if(pos<= altturaCabecalho){
+		mudaCorBackground([cabecalho], '#fff');
+		mudaColor([textLog],"#333");
+		CorBtnMenu('#333');
+		if(pos>altturaCabecalho){
+
+			mudaCorBackground([cabecalho], "");
+			mudaColor([textLog],"#fff");
+			CorBtnMenu('#0af');
+		}
+	}
+
+}
+
+function CorBtnMenu(cor){
+	mudaCorBackground(linhasMenu,cor);
+}
+
+
 
 //ANIMAÇÃO BTN MENU	E CONTENT MENU
-var linhasBtnMenu = document.querySelectorAll('.linha');
-var contentMenu = document.getElementById('content-menu');
+(function animaBtnMenu(){  //usar '(' no inicio na function e '())' no fechamento do escopo já criar e chama a func.
+
+	btnMenu.addEventListener('click',function(){
+
+		linhasMenu.forEach(function(e,i){
+
+			e.classList.toggle('togglel'+i);
+
+		});
+
+		openCloseMenu();
+
+	});
+
+}());
+
+
+
+
+
+
 var menu = contentMenu.querySelector('#menu');
 menu.style.marginTop = cabecalho.offsetHeight+"px";
 
-btnMenu.addEventListener('click',function(){
-
-	linhasBtnMenu.forEach(function(e,i){
-
-		e.classList.toggle('togglel'+i);
-
-	})
-
-
-	contentMenu.classList.toggle('content-menu-toggle');
-	body
-
-});
-
-//aqui muda a cor do cabeçalho e btn menu
-var pos;
-window.addEventListener('scroll',function(){
-
-	pos = window.scrollY;
-	posCab = cabecalho.offsetHeight;
-	var textLog = document.getElementById('logo-span');
-
-	if (pos > posCab) {
-
-		mudaCorBackground([cabecalho], '#fff');
-		cabecalho.style.borderBottom = "rgba(0,170,255,0.2) 1px solid";
-		mudaCorBackground(linhasBtnMenu, '#333');
-		mudaColor([textLog],"#333");
-
-	}else{
-
-		mudaCorBackground([cabecalho], 'initial');
-		cabecalho.style.borderBottom = "rgba(255,255,255,.2) 1px solid";
-		mudaCorBackground(linhasBtnMenu, '#fff');
-		mudaColor([textLog],"#fff");
-	}
 
 
 
-})
+
 
 	//efeito maquina de escrever
 
