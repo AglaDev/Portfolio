@@ -91,6 +91,7 @@ window.addEventListener('scroll',function(){
 
 	//ANIMAÇÕES NA SECTION DE SERVIÇOS
 	//usar variavel pos
+	(function(){ //serve para encapsular todo esse escopo para não gerar conflitos futuros
 	var servicos = document.querySelectorAll('.servico');
 	var offset = window.innerHeight * 2.8 /4;
 	console.log(offset);
@@ -127,6 +128,8 @@ window.addEventListener('scroll',function(){
 
 
 	});
+
+}());
 
 	
 

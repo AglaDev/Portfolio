@@ -277,8 +277,11 @@ img{width: 100%;}
 	grid-row:inicio-servicos/fim-servicos ;
 	margin-top: 30px;
 }
-
+.servicos{
+	width: 100%;
+}
 .servico{ /*ora que aparecer no scroll almentar a scale da img com js e o ttitle surge do left*/
+	height: auto;
 	background-color: #fff;
 	display:flex;
 	flex-direction: column;
@@ -290,6 +293,7 @@ img{width: 100%;}
 }
 .servico .div-img{
 	width: 100%;
+	max-height: 100px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 25px;
@@ -345,9 +349,40 @@ img{width: 100%;}
 	grid-row: inicio-footer / fim-footer;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) { /*tamanho para tablet*/
-	body{
+@media screen and (min-width: 480px){
+	.grid-container{
+		width: 100%;
+		display: grid;
+		grid-template-columns: [inicio]70px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]70px[fim];
+		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+				  [inicio-servicos] auto[fim-servicos]10px
+				  [inicio-slider] 30vh [fim-slider]10px
+				  [inicio-projetos]30vh[fim-projetos]10px
+				  [inicio-footer] 70vh [fim-footer];
+		background-color: #efefef;
+	}
+}
+@media screen and (min-width: 580px) { /*tamanho para tablet*/
+	.grid-container{
+		width: 100%;
+		display: grid;
+		grid-template-columns: [inicio]20px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]20px[fim];
+		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+				  [inicio-servicos] auto[fim-servicos]10px
+				  [inicio-slider] 30vh [fim-slider]10px
+				  [inicio-projetos]30vh[fim-projetos]10px
+				  [inicio-footer] 70vh [fim-footer];
+		background-color: #efefef;
+	}
+	.servicos{
+		display: flex;
+		justify-content: space-around;
 		
 	}
+	.servicos .servico{
+		width: 30%;
+	}
+	
+	
 }
 
