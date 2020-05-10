@@ -5,6 +5,7 @@ window.onload= function(){
 	var btnMenu = document.getElementById('btn_menu');
 	var linhasMenu = btnMenu.querySelectorAll('.linha');
 	var contentMenu = document.getElementById('content-menu');
+	var menu = contentMenu.querySelector('#menu');
 	var cabecalho = document.getElementById('content-logo-btn-menu');
 	var altturaCabecalho = cabecalho.offsetHeight;
 	var title = document.querySelector('.section-titles');
@@ -15,7 +16,7 @@ window.onload= function(){
 
 
 title.style.marginTop= altturaCabecalho+60+'px';
-
+menu.style.marginTop = cabecalho.offsetHeight+"px";
 //FUNÇÃO MUDA COR 
 function mudaCorBackground(arg,cor){	
 	arg.forEach(function(e){
@@ -55,24 +56,26 @@ function openCloseMenu(){
 	body.classList.toggle('paralisa-body');
 	var pos = window.scrollY;
 	 //existe um bug quando recarrega a pagina com scroll maior que o tamanho do cabecalho
+	 /* 	RESOLVER ESSE BUG DEPOIS
 	if(pos<= altturaCabecalho){
 		mudaCorBackground([cabecalho], '#fff');
+		cabecalho.style.borderBottom = "rgba(0,170,255,0.2) 1px solid";
 		mudaColor([textLog],"#333");
 		CorBtnMenu('#333');
 		if(pos>altturaCabecalho){
-
 			mudaCorBackground([cabecalho], "");
+			cabecalho.style.borderBottom = "rgba(255,255,255,.2) 1px solid";
 			mudaColor([textLog],"#fff");
-			CorBtnMenu('#0af');
+			CorBtnMenu('#fff');
 		}
 	}
+	*/
 
 }
 
 function CorBtnMenu(cor){
 	mudaCorBackground(linhasMenu,cor);
 }
-
 
 
 //ANIMAÇÃO BTN MENU	E CONTENT MENU
@@ -94,11 +97,6 @@ function CorBtnMenu(cor){
 
 
 
-
-
-
-var menu = contentMenu.querySelector('#menu');
-menu.style.marginTop = cabecalho.offsetHeight+"px";
 
 
 
