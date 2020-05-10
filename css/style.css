@@ -18,7 +18,7 @@ img{width: 100%;}
 	width: 100%;
 	display: grid;
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
-	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+	grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]10px
 			  [inicio-servicos] auto[fim-servicos]10px
 			  [inicio-slider] 30vh [fim-slider]10px
 			  [inicio-projetos]30vh[fim-projetos]10px
@@ -275,7 +275,6 @@ img{width: 100%;}
 .container-servicos{
 	grid-column: inicio-temp / fim-temp ;
 	grid-row:inicio-servicos/fim-servicos ;
-	margin-top: 30px;
 }
 .servicos{
 	width: 100%;
@@ -354,7 +353,7 @@ img{width: 100%;}
 		width: 100%;
 		display: grid;
 		grid-template-columns: [inicio]70px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]70px[fim];
-		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+		grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]10px
 				  [inicio-servicos] auto[fim-servicos]10px
 				  [inicio-slider] 30vh [fim-slider]10px
 				  [inicio-projetos]30vh[fim-projetos]10px
@@ -367,7 +366,7 @@ img{width: 100%;}
 		width: 100%;
 		display: grid;
 		grid-template-columns: [inicio]20px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]20px[fim];
-		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+		grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]10px
 				  [inicio-servicos] auto[fim-servicos]10px
 				  [inicio-slider] 30vh [fim-slider]10px
 				  [inicio-projetos]30vh[fim-projetos]10px
@@ -385,4 +384,10 @@ img{width: 100%;}
 	
 	
 }
+@media screen and (min-width: 720px){
 
+	#content-logo-btn-menu{
+		padding: 20px 40px;
+	}
+
+}
