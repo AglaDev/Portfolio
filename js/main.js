@@ -65,9 +65,6 @@ window.addEventListener('scroll',function(){
 
 })
 
-	
-
-
 	//efeito maquina de escrever
 
 	function escreveFrase(elemento){
@@ -92,9 +89,44 @@ window.addEventListener('scroll',function(){
 	divSubtitulo.style.transform = 'translate3d(0,0,0)';
 	escreveFrase(subtitulo);
 
+	//ANIMAÇÕES NA SECTION DE SERVIÇOS
+	//usar variavel pos
+	var servicos = document.querySelectorAll('.servico');
+	var offset = window.innerHeight * 2.6 /4;
+	console.log(offset);
+	function animeScroll(){
+		
+		var docTop = window.scrollY;
+		
+		servicos.forEach(function(e){
+			var divTitle = e.querySelector('.div-titles');
+			var imgZoom = e.querySelector('.div-img img');
+			var itemTop = e.offsetTop;
+			
+			if(docTop > itemTop - offset){
+				divTitle.classList.add('div-titles-active');
+				imgZoom.classList.add('img-zoom');
+
+			}else{
+				divTitle.classList.remove('div-titles-active');
+				imgZoom.classList.remove('img-zoom');
+			}
+
+		});
+
+	}
+
 	
 
+	window.addEventListener('scroll', function(){
 
+
+		animeScroll();
+
+
+	});
+
+	
 
 
 
