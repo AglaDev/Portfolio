@@ -354,7 +354,7 @@ img{width: 100%;}
 	width: 100%;
 	margin-bottom: 20px;
 	display: flex;
-	cursor: pointer;
+	
 	flex-direction: column;
 }
 .title-detalhe{
@@ -391,7 +391,7 @@ img{width: 100%;}
 	padding: 10px 15px;
 	cursor: pointer;
 	flex-direction: column;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px;
 	margin-bottom: 20px;
 }
 .title-item{
