@@ -96,13 +96,6 @@ function CorBtnMenu(cor){
 }());
 
 
-
-
-
-
-
-
-
 	//efeito maquina de escrever
 
 	function escreveFrase(elemento){
@@ -156,7 +149,6 @@ function CorBtnMenu(cor){
 	}
 
 	
-
 	animeScroll();
 
 	window.addEventListener('scroll', function(){
@@ -164,14 +156,32 @@ function CorBtnMenu(cor){
 
 		animeScroll();
 
-
 	});
 
 }());
 
+	//CONFIGURAÇÕES ITENS DOS DETALHE DOS SERVIÇOS
+
+	var itensDetalhes = document.querySelectorAll('.item-detalhe');
 	
+	console.log(itensDetalhes);
 
+	function abrirItem(arg){
 
+		arg.forEach(function(e,i){
+
+			e.addEventListener('click',function(){
+				var imgTexto = this.querySelector('.contet-img-texto');
+					
+				imgTexto.classList.toggle('contet-img-texto-toggle');
+
+			})
+
+		})
+
+	}
+
+	abrirItem(itensDetalhes);
 
 
 }

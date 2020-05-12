@@ -392,13 +392,13 @@ img{width: 100%;}
 	cursor: pointer;
 	flex-direction: column;
 	border-radius: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .title-item{
 	width: 100%;
 	font-size: 0.8em;
 	color: #6f7c81;
-	margin-bottom: 20px;
+	
 }
 .title-item:hover{
 	color: #333;
@@ -408,12 +408,21 @@ img{width: 100%;}
 }
 
 .contet-img-texto{
-	display: flex;
+	display: none;
 	flex-direction: column;
+	transform: translateY(-90px);
+	animation: .4s;
+}
+
+.contet-img-texto-toggle{
+	display: block;
+	animation: .4s;
+	transform: translateY(0);
 }
 
 .img-item{
 	width: 100%;
+	margin-top: 20px;
 	margin-bottom: 15px;
 }
 .img-item img{
