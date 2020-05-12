@@ -1,6 +1,5 @@
 window.onload= function(){
 	
-	
 	//AFASTAR O TITULO DO CABEÇALHO
 	var btnMenu = document.getElementById('btn_menu');
 	var linhasMenu = btnMenu.querySelectorAll('.linha');
