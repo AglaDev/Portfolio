@@ -166,22 +166,7 @@ function CorBtnMenu(cor){
 	
 	console.log(itensDetalhes);
 
-	function abrirItem(arg){
 
-		arg.forEach(function(e,i){
-
-			e.addEventListener('click',function(){
-				var imgTexto = this.querySelector('.contet-img-texto');
-					
-				imgTexto.classList.toggle('contet-img-texto-toggle');
-
-			})
-
-		})
-
-	}
-
-	abrirItem(itensDetalhes);
 
 
 }
