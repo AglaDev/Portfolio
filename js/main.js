@@ -17,32 +17,45 @@ window.onload= function(){
 title.style.marginTop= altturaCabecalho+60+'px';
 menu.style.marginTop = cabecalho.offsetHeight+"px";
 //FUNÇÃO BTN VOLTAR PARA O TOPO
-function voltaTopo(){
+var btnTopo = document.querySelector('.volta-topo');
+function rolaPagina(){
+	var posi;
+	window.onscroll = function(){
+		
+	}
+	
+	btnTopo.addEventListener('click',function(){
+		posi = window.scrollY;
+		var teste = posi;
+		var interval = setInterval(function(){
+			
+			if(teste>0){
+				teste--;
+				window.scrollTo(0,teste);
+				console.log(teste);
+			}
 
-	window.scrollTo(0,0);
+		},0.01);
+		console.log('clicou');
+	});
 
 }
 
-(function botaoTopo(){
-	var btnTopo = document.querySelector('.volta-topo')
+(function mostrarBotaoTopo(){
 
 	window.addEventListener('scroll',function(){
-
-		if(window.scrollY > altturaCabecalho + 100){
+		var posAtual= window.scrollY;
+		if(posAtual> altturaCabecalho + 100){
 
 			btnTopo.style.opacity = 0.5;
-
-			btnTopo.addEventListener('click',function(){
-
-				voltaTopo();
-
-			})
 
 		}else{
 			btnTopo.style.opacity = 0;
 		}
 
 	});
+
+	rolaPagina();
 }());
 
 //FUNÇÃO MUDA COR 
