@@ -16,6 +16,35 @@ window.onload= function(){
 
 title.style.marginTop= altturaCabecalho+60+'px';
 menu.style.marginTop = cabecalho.offsetHeight+"px";
+//FUNÇÃO BTN VOLTAR PARA O TOPO
+function voltaTopo(){
+
+	window.scrollTo(0,0);
+
+}
+
+(function botaoTopo(){
+	var btnTopo = document.querySelector('.volta-topo')
+
+	window.addEventListener('scroll',function(){
+
+		if(window.scrollY > altturaCabecalho + 100){
+
+			btnTopo.style.opacity = 0.5;
+
+			btnTopo.addEventListener('click',function(){
+
+				voltaTopo();
+
+			})
+
+		}else{
+			btnTopo.style.opacity = 0;
+		}
+
+	});
+}());
+
 //FUNÇÃO MUDA COR 
 function mudaCorBackground(arg,cor){	
 	arg.forEach(function(e){
@@ -162,9 +191,30 @@ function CorBtnMenu(cor){
 
 	//CONFIGURAÇÕES ITENS DOS DETALHE DOS SERVIÇOS
 
-	var itensDetalhes = document.querySelectorAll('.item-detalhe');
+	var titleItens = document.querySelectorAll('.title-item');
 	
-	console.log(itensDetalhes);
+	titleItens.forEach(function(e,i){
+
+		e.addEventListener('click',function(){
+
+			this.classList.toggle('item-active');
+	
+							  //onextElementSibling pega o proxi. elemento
+			var painel = this.nextElementSibling; 
+			
+			
+			if(painel.style.maxHeight){
+				painel.style.maxHeight = null;
+			}else{
+				painel.style.maxHeight = painel.scrollHeight +'px';
+			}
+
+		})
+
+	})
+
+
+	
 
 
 

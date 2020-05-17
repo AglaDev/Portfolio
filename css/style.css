@@ -18,6 +18,25 @@ img{width: 100%;}
 .paralisa-body{
 	overflow: hidden;
 }
+
+.volta-topo{
+	height: 30px;
+	width: 30px;
+	background-color: #0af;
+	font-size: 14px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	opacity: 0;
+	transition: opacity .2s ease-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.volta-topo i{
+	color: #fff;
+}
+
 /*CONFIGURAÇÕES DO GRID-CONTAINER*/	
 .grid-container{
 	width: 100%;
@@ -401,11 +420,18 @@ img{width: 100%;}
 	margin-bottom: 1px;
 	border-radius: 8px 8px 0 0 ;
 }
-.title-item:hover{
+.item-active{
 	color: #333;
+}
+.item-active i{
+	transition: transform .2s ease-out;
+	transform: rotate(-90deg);
 }
 .title-item span{
 	padding-right: 10px;
+}
+.title-item span i{
+	transition: transform .2s ease-in;
 }
 
 .contet-img-texto{
@@ -415,6 +441,9 @@ img{width: 100%;}
 	animation: .4s;
 	background-color: #fff;
 	border-radius: 0 0 8px 8px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .2s ease-out;
 }
 
 
