@@ -380,8 +380,9 @@ img{width: 100%;}
 	width: 100%;
 	background-color: #fff;
 	display: flex;
-	justify-content:flex-start;
+	justify-content:space-between ;
 	padding: 10px 15px;
+        Align-items:center;
 	border-left: 2px solid #0af;
 	font-size: 0.9em;
 	margin-bottom: 15px;
@@ -390,8 +391,8 @@ img{width: 100%;}
 	flex: 1;
 	text-align: center;
 	color: #333 ;
-        display:flex;
-        justify-content:space-between;
+        
+      
 }
 
 .title-detalhe span{
