@@ -17,26 +17,27 @@ window.onload= function(){
 title.style.marginTop= altturaCabecalho+60+'px';
 menu.style.marginTop = cabecalho.offsetHeight+"px";
 //FUNÇÃO BTN VOLTAR PARA O TOPO
+
 var btnTopo = document.querySelector('.volta-topo');
+
 function rolaPagina(){
 	var posi;
-	window.onscroll = function(){
-		
-	}
-	
+
 	btnTopo.addEventListener('click',function(){
 		posi = window.scrollY;
-		var teste = posi;
+		time = 10;
 		var interval = setInterval(function(){
 			
-			if(teste>0){
-				teste--;
-				window.scrollTo(0,teste);
-				console.log(teste);
+			if(posi>0){
+				posi-=time;
+				window.scrollTo(0,posi);
+				console.log(posi);
+			}else{
+				clearInterval(interval);
 			}
 
-		},0.01);
-		console.log('clicou');
+		},4);
+		
 	});
 
 }
@@ -211,15 +212,18 @@ function CorBtnMenu(cor){
 		e.addEventListener('click',function(){
 
 			this.classList.toggle('item-active');
-	
+			
+			
 							  //onextElementSibling pega o proxi. elemento
 			var painel = this.nextElementSibling; 
 			
 			
 			if(painel.style.maxHeight){
 				painel.style.maxHeight = null;
+				this.style.borderRadius = "8px";
 			}else{
 				painel.style.maxHeight = painel.scrollHeight +'px';
+				this.style.borderRadius = "8px 8px 0 0";
 			}
 
 		})
