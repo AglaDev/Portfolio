@@ -25,7 +25,7 @@ function rolaPagina(){
 
 	btnTopo.addEventListener('click',function(){
 		posi = window.scrollY;
-		time = 10;
+		time = 50;
 		var interval = setInterval(function(){
 			
 			if(posi>0){
