@@ -25,7 +25,7 @@ function rolaPagina(){
 
 	btnTopo.addEventListener('click',function(){
 		posi = window.scrollY;
-		time = 50;
+		time = 10;
 		var interval = setInterval(function(){
 			
 			if(posi>0){
@@ -226,9 +226,9 @@ function CorBtnMenu(cor){
 				this.style.borderRadius = "8px 8px 0 0";
 			}
 
-		})
+		});
 
-	})
+	});
 
 
 	
