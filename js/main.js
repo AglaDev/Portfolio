@@ -219,10 +219,28 @@ function CorBtnMenu(cor){
 			
 			
 			if(painel.style.maxHeight){
+
 				painel.style.maxHeight = null;
 				this.style.borderRadius = "8px";
 			}else{
+
+				var fullPanel = document.querySelectorAll('.contet-img-texto');
+				
+				fullPanel.forEach(function(e,i){
+
+					var possui = fullPanel[i].style.maxHeight !=0;
+
+					if(possui){
+						fullPanel[i].style.maxHeight = null;
+						var titlefechado = fullPanel[i].previousElementSibling;
+						titlefechado.style.borderRadius = "8px";
+						titlefechado.classList.toggle('item-active');
+					}
+
+				});
+
 				painel.style.maxHeight = painel.scrollHeight +'px';
+
 				this.style.borderRadius = "8px 8px 0 0";
 			}
 
