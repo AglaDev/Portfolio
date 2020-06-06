@@ -293,13 +293,14 @@ img{width: 100%;}
 	width: 2px;
 	height:4px;
 	background-color: #0af;
-	animation: mouse .8s infinite;
-	transition: .3s;
+	animation: mouse 1s infinite;
+	transition: 1s;
 }
 @keyframes mouse{
-	0%{transform: translateY(-9px);opacity: 1;}
-	50%{transform: translateY(-3px);opacity: .5;}
-	100%{transform: translateY(0);opacity: 0;}
+	0%{transform: translateY(-3px);opacity: 0;}
+	50%{transform: translateY(-6px);opacity: .1;}
+	75%{transform: translateY(-9px);opacity: .5;}
+	100%{transform: translateY(0px);opacity: 1;}
 }
 
 
