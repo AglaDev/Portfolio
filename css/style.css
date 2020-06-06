@@ -296,7 +296,11 @@ img{width: 100%;}
 	animation: mouse .8s infinite;
 	transition: .3s;
 }
-
+@keyframes mouse{
+	0%{transform: translateY(5px);opacity: 1;}
+	50%{transform: translateY(3px);opacity: .5;}
+	100%{transform: translate(1);opacity: 0;}
+}
 
 
 /*CONFIGURAÇÕES SEÇÃO DE SERVIÇOS*/
