@@ -10,7 +10,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 a{text-decoration: none;}
-ul{list-style: none;}
+ul,ol{list-style: none;}
 img{width: 100%;}
 ::-webkit-scrollbar {
     width: 0px;
@@ -44,7 +44,7 @@ img{width: 100%;}
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
 	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
 			  [inicio-servicos] auto[fim-servicos]10px
-			  [inicio-slider] 30vh [fim-slider]10px
+			  [inicio-slider] auto [fim-slider]30px
 			  [inicio-projetos]auto[fim-projetos]10px
 			  [inicio-footer] auto [fim-footer];
 	background-color: #efefef;
@@ -58,7 +58,7 @@ img{width: 100%;}
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .title-sections h2{
 	color: #333;
@@ -476,8 +476,39 @@ img{width: 100%;}
 .container-slider{
 	grid-column:inicio  / fim ;
 	grid-row: inicio-slider/fim-slider;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
+
+.slide{
+	height:200px;
+	background-color: #fff;
+	position: relative;
+}
+
+.control-slide{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+}
+.control-slide li{
+	display: block;
+	margin-right: 7px;
+	padding: 5px 0;
+}
+.control-slide li:last-child{
+	margin-right: none;
+}
+.control-slide .control{
+	width: 15px;
+	height: 4px;
+	background-color: #333;
+	display: block;
+}
+
 
 /*CONFIGURAÇÕES DOS PROJETOS*/
 .container-projetos{
@@ -593,7 +624,7 @@ img{width: 100%;}
 		grid-template-columns: [inicio]70px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]70px[fim];
 		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
 				  [inicio-servicos] auto[fim-servicos]10px
-				  [inicio-slider] 30vh [fim-slider]10px
+				  [inicio-slider] auto [fim-slider]30px
 				  [inicio-projetos]30vh[fim-projetos]10px
 				  [inicio-footer] 70vh [fim-footer];
 		background-color: #efefef;
@@ -606,7 +637,7 @@ img{width: 100%;}
 		grid-template-columns: [inicio]20px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]20px[fim];
 		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
 				  [inicio-servicos] auto[fim-servicos]10px
-				  [inicio-slider] 30vh [fim-slider]10px
+				  [inicio-slider] auto[fim-slider]30px
 				  [inicio-projetos]30vh[fim-projetos]10px
 				  [inicio-footer] 70vh [fim-footer];
 		background-color: #efefef;
