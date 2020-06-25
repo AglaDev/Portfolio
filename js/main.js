@@ -18,8 +18,8 @@ title.style.marginTop= altturaCabecalho+60+'px';
 menu.style.marginTop = cabecalho.offsetHeight+"px";
 //FUNÇÃO BTN VOLTAR PARA O TOPO
 
-var btnTopo = document.querySelector('.volta-topo');
 
+var btnTopo = document.querySelector('.volta-topo');
 function rolaPagina(){
 	var posi;
 

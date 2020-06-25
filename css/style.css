@@ -471,10 +471,10 @@ img{width: 100%;}
 }
 
 
-
+/*CONFIGURAÇÃO DO SLIDE*/	
 
 .container-slider{
-	grid-column:inicio-temp  / fim-temp ;
+	grid-column:inicio  / fim ;
 	grid-row: inicio-slider/fim-slider;
 	margin-bottom: 30px;
 }
@@ -676,3 +676,6 @@ img{width: 100%;}
 		padding: 0 30px;
 	}
 }
+
+
+
