@@ -138,6 +138,33 @@ function CorBtnMenu(cor){
 
 }());
 
+//configurações do submenus do admn
+
+	(function abrirSubmenu(){
+
+		var btnMenu = document.querySelectorAll('.btn-submenu')
+
+
+		btnMenu.forEach((e)=>{
+
+			e.addEventListener('click',()=>{
+
+				
+				
+
+
+			})
+
+		})
+
+
+	
+
+	}())
+
+
+
+
 
 	//efeito maquina de escrever
 

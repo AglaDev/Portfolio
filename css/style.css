@@ -215,6 +215,25 @@ img{width: 100%;}
 	background-color: #333;
 	color: #fff;
 }
+/*SUBMENU*/
+.btn-submenu{
+	flex-direction: column;
+}
+
+.submenu{
+	padding: 0 0 0 10px;
+	width: 100%;
+}
+.submenu li{
+	display: block;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+.submenu li a{
+	display: block;
+}
+
+
 /*TITULOS CABEÇALHOS*/
 .section-titles{
 	display: flex;
@@ -492,10 +511,10 @@ img{width: 100%;}
 	display: flex;
 }
 .item{
-	min-width: 200px;
+	min-width: 250px;
 	height: 100%;
 	background-color: #ccc;
-	margin-right: 5px;
+	margin-right: 3px;
 }
 
 .btn-slide{
@@ -507,7 +526,7 @@ img{width: 100%;}
 	padding: 0 20px;
 }
 .btn-slide:hover{
-	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+	background: linear-gradient(rgba(0,0,0,0.01),rgba(0,0,0,0.1));
 	transition: .3s;
 
 }
@@ -531,7 +550,7 @@ img{width: 100%;}
 	bottom: 0;
 	display: flex;
 	justify-content: center;
-	background:transparent;
+	background:#fff;
 }
 .control-slide li{
 	display: block;
@@ -752,5 +771,12 @@ img{width: 100%;}
 	}
 }
 
+@media screen and (min-width: 1720px){
+
+	body{
+		max-width: 1980px;
+		margin: 0 auto;
+	}	
+}
 
 
