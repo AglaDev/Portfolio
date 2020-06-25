@@ -484,6 +484,18 @@ img{width: 100%;}
 	height:200px;
 	background-color: #fff;
 	position: relative;
+	overflow: hidden;
+}
+
+.section-slide{
+	height: 100%;
+	display: flex;
+}
+.item{
+	min-width: 200px;
+	height: 100%;
+	background-color: #ccc;
+	margin-right: 5px;
 }
 
 .btn-slide{
@@ -496,6 +508,7 @@ img{width: 100%;}
 }
 .btn-slide:hover{
 	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+	transition: .3s;
 
 }
 .btn-slide i{
@@ -532,10 +545,13 @@ img{width: 100%;}
 	width: 7px;
 	height: 7px;
 	border-radius: 100%;
-	background-color: #ccc;
+	background-color: #333;
 	display: block;
+	opacity: .5;
 }
-
+.control-slide .control:hover{
+	opacity: 1;
+}
 
 
 /*CONFIGURAÇÕES DOS PROJETOS*/
