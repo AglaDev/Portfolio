@@ -477,6 +477,7 @@ img{width: 100%;}
 	grid-column:inicio  / fim ;
 	grid-row: inicio-slider/fim-slider;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 .slide{
@@ -485,6 +486,31 @@ img{width: 100%;}
 	position: relative;
 }
 
+.btn-slide{
+	height: 100%;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+}
+.btn-slide:hover{
+	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+
+}
+.btn-slide i{
+	color: #fff;
+}
+.btn-prev{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.btn-next{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 .control-slide{
 	width: 100%;
 	position: absolute;
@@ -492,7 +518,7 @@ img{width: 100%;}
 	bottom: 0;
 	display: flex;
 	justify-content: center;
-	background-color: #fff;
+	background:transparent;
 }
 .control-slide li{
 	display: block;
@@ -503,11 +529,13 @@ img{width: 100%;}
 	margin-right: none;
 }
 .control-slide .control{
-	width: 15px;
-	height: 4px;
-	background-color: #333;
+	width: 7px;
+	height: 7px;
+	border-radius: 100%;
+	background-color: #ccc;
 	display: block;
 }
+
 
 
 /*CONFIGURAÇÕES DOS PROJETOS*/
