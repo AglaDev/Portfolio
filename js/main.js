@@ -255,7 +255,7 @@ function CorBtnMenu(cor){
 				
 				fullPanel.forEach(function(e,i){
 
-					var possui = fullPanel[i].style.maxHeight !=0;
+					var possui = fullPanel[i].style.maxHeight?true:false;
 
 					if(possui){
 						fullPanel[i].style.maxHeight = null;

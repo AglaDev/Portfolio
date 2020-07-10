@@ -493,14 +493,14 @@ img{width: 100%;}
 /*CONFIGURAÇÃO DO SLIDE*/	
 
 .container-slider{
-	grid-column:inicio  / fim ;
+	grid-column:inicio/ fim ;
 	grid-row: inicio-slider/fim-slider;
 	margin-bottom: 20px;
 	position: relative;
 }
 
 .slide{
-	height:200px;
+	height:250px;
 	background-color: #fff;
 	position: relative;
 	overflow: hidden;
@@ -511,7 +511,7 @@ img{width: 100%;}
 	display: flex;
 }
 .item{
-	min-width: 250px;
+	min-width: 100%;
 	height: 100%;
 	background-color: #ccc;
 	margin-right: 3px;
@@ -747,6 +747,17 @@ img{width: 100%;}
 	
 	.projeto-03{
 		grid-column:inicio-terceira-coluna / fim-terceira-coluna ;
+	}
+
+	.section-slide{
+		height: 100%;
+		display: flex;
+	}
+	.section-slide .item{ /*item slide*/
+		min-width: 240px;
+		height: 100%;
+		background-color: #ccc;
+		margin-right: 3px;
 	}
 	
 }
