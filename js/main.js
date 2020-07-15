@@ -232,13 +232,13 @@ function CorBtnMenu(cor){
 
 	//CONFIGURAÇÕES ITENS DOS DETALHE DOS SERVIÇOS
 
-	var titleItens = document.querySelectorAll('.title-item');
+	var titleItens = document.querySelectorAll('.title-habilidade');
 	
 	titleItens.forEach(function(e,i){
 
 		e.addEventListener('click',function(){
 
-			this.classList.toggle('item-active');
+			this.classList.toggle('habilidade-active');
 			
 			
 							  //onextElementSibling pega o proxi. elemento
@@ -261,7 +261,7 @@ function CorBtnMenu(cor){
 						fullPanel[i].style.maxHeight = null;
 						var titlefechado = fullPanel[i].previousElementSibling;
 						titlefechado.style.borderRadius = "8px";
-						titlefechado.classList.toggle('item-active');
+						titlefechado.classList.toggle('habilidade-active');
 					}
 
 				});
