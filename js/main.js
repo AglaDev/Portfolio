@@ -11,6 +11,7 @@ window.onload= function(){
 	var posScrol;
 	var textLog = document.getElementById('logo-span');
 	
+	
 
 
 
