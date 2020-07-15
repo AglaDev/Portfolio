@@ -42,7 +42,7 @@ img{width: 100%;}
 	width: 100%;
 	display: grid;
 	grid-template-columns: [inicio]30px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]30px[fim];
-	grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+	grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]50px
 			  [inicio-servicos] auto[fim-servicos]10px
 			  [inicio-slider] auto [fim-slider]30px
 			  [inicio-projetos]auto[fim-projetos]10px
@@ -71,6 +71,7 @@ img{width: 100%;}
 	background-color: #0af;
 }
 .container-cabecalho{
+	height: auto;
 	grid-column:inicio / fim ;
 	grid-row:inicio-cabecalho / fim-cabecalho ;
 	background: linear-gradient(rgba(46, 49, 49, 0.8),rgba(46, 49, 49, 0.8)), url(../img/jpg/cabecalho1.jpg);
@@ -82,7 +83,6 @@ img{width: 100%;}
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 60px;
 }
 #content-logo-btn-menu{
 	width: 100%;
@@ -247,7 +247,7 @@ img{width: 100%;}
 	font-size: 1.5em;
 	color: #ffffff;
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 60px;
 }
 #div-subtitulo{
 	width: 100%;
@@ -295,7 +295,7 @@ img{width: 100%;}
 	color: #fff;
 	padding: 10px 15px;
 	border-radius: 8px;
-	margin-bottom: 40px;
+	margin-bottom: 45px;
 }
 
 .section-buttons-controls #btn-mouse{
@@ -710,7 +710,7 @@ img{width: 100%;}
 		width: 100%;
 		display: grid;
 		grid-template-columns: [inicio]70px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]70px[fim];
-		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+		grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]50px
 				  [inicio-servicos] auto[fim-servicos]10px
 				  [inicio-slider] auto [fim-slider]30px
 				  [inicio-projetos]auto[fim-projetos]10px
@@ -723,7 +723,7 @@ img{width: 100%;}
 		width: 100%;
 		display: grid;
 		grid-template-columns: [inicio]20px[inicio-temp] 1fr repeat(21, 10px 1fr)[fim-temp]20px[fim];
-		grid-template-rows: [inicio-cabecalho] auto [fim-cabecalho]10px
+		grid-template-rows: [inicio-cabecalho] 100vh [fim-cabecalho]50px
 				  [inicio-servicos] auto[fim-servicos]10px
 				  [inicio-slider] auto[fim-slider]30px
 				  [inicio-projetos]auto[fim-projetos]10px
